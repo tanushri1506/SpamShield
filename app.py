@@ -53,7 +53,7 @@ st.write("AI-powered spam detection using Machine Learning")
 with st.sidebar:
     st.header("About")
     st.write("""
-    This app uses a **Machine Learning model** (likely Naive Bayes) to classify messages as spam or ham.
+    This app uses a Naive Bayes machine learning model to classify email/SMS messages as spam or ham.
     
     **Features:**
     - Text preprocessing
