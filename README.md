@@ -5,8 +5,6 @@ This project builds an end-to-end **Spam Detection System** using Natural Langua
 
 The dataset is **highly imbalanced**, so special emphasis is placed on **precision** to minimize false positives.
 
----
-
 ## Dataset
 - **Source:** SMS Spam Collection Dataset
 - **Records:** 5,168 unique SMS messages (after cleaning)
@@ -18,8 +16,6 @@ The dataset is **highly imbalanced**, so special emphasis is placed on **precisi
 - `Message`: Raw SMS text  
 - `Category`: Spam / Ham label  
 
----
-
 ## Tools & Technologies
 - **Programming Language:** Python  
 - **Libraries:**  
@@ -29,8 +25,6 @@ The dataset is **highly imbalanced**, so special emphasis is placed on **precisi
   - Machine Learning: Scikit-learn, XGBoost  
 - **Environment:** Jupyter Notebook  
 
----
-
 ## Project Workflow
 
 ### 1. Data Cleaning
@@ -39,8 +33,6 @@ The dataset is **highly imbalanced**, so special emphasis is placed on **precisi
 - Encoded target labels using `LabelEncoder`
 - Removed duplicate messages (404 duplicates)
 - Final dataset size: **5,168 × 2**
-
----
 
 ### 2. Exploratory Data Analysis (EDA)
 - Analyzed class distribution (**~87% Ham, ~13% Spam**)
@@ -56,8 +48,6 @@ The dataset is **highly imbalanced**, so special emphasis is placed on **precisi
   - Pair plots
   - Correlation heatmaps
 
----
-
 ### 3. Text Preprocessing
 - Converted text to lowercase
 - Tokenization using NLTK
@@ -68,15 +58,11 @@ The dataset is **highly imbalanced**, so special emphasis is placed on **precisi
 - Applied **Porter Stemming**
 - Created a cleaned `Transformed_Message` column
 
----
-
 ### 4. Feature Engineering
 - Generated word clouds for spam and ham messages
 - Identified most frequent words in spam vs ham
 - Converted text into numerical features using:
   - **TF-IDF Vectorization** (`max_features = 3000`)
-
----
 
 ### 5. Model Building
 Trained and evaluated multiple classification models:
@@ -91,8 +77,6 @@ Trained and evaluated multiple classification models:
 - Extra Trees
 - Gradient Boosting
 - XGBoost
-
----
 
 ### 6. Model Evaluation
 - Evaluation metrics:
@@ -114,14 +98,10 @@ Despite strong ensemble performance, **Multinomial Naive Bayes** was selected du
 - Faster inference
 - Better deployment suitability
 
----
-
 ### 7. Model Improvement
 - Tuned TF-IDF `max_features`
 - Compared scaling and additional numeric features
 - Verified consistent performance across configurations
-
----
 
 ### 8. Deployment Preparation
 - Serialized trained components using `pickle`:
@@ -129,20 +109,14 @@ Despite strong ensemble performance, **Multinomial Naive Bayes** was selected du
   - `model.pkl`
 - These files can be directly used in a **Streamlit / Flask web app** for real-time spam detection.
 
----
-
 ## Key Insights
 - Spam messages are significantly **longer** and more **information-dense**
 - Pricing, reward, and urgency-related keywords dominate spam corpus
 - Precision-focused modeling is crucial for imbalanced NLP problems
 - Simple probabilistic models can outperform complex models for text classification
 
----
-
 ## Conclusion
 This project demonstrates a complete NLP pipeline—from raw text to a deployment-ready model—highlighting the importance of preprocessing, feature engineering, and metric selection. The final system achieves **high precision**, making it suitable for real-world spam filtering applications.
-
----
 
 ## Contact
 - **Name:** Tanushri Barsainya  
